@@ -1,1 +1,1 @@
-# goheungchoi.github.io
+# docs/index.html
