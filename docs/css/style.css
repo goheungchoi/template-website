@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.background_div {
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    display: inline-flex;
+    flex-direction: row;
+    background-image: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,0.6));
+    transition: opacity 0.125s ease-out 0s;
+    opacity: 1;
+}
+
+.background_div:active {
+    opacity: 0.5;
+}
+
+.right {
+    display:inline-flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    position: relative;
+    width: 400px;
+}
+.left {
+    display:inline-flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-between;
+    height: 100%;
+    width: 400px;
+
+}
+
+.interface {
+    position: relative;
+
+}
+.todo {
+    background-color: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    border-radius: 10%;
+    padding-left: 20px;
+    margin-top: 5%;
+    position: relative;
+    display: block;
+    padding: 15px;
+    width: 100%;
+    min-height: 65vh;
+    bottom: 0%;
+}
+.status {
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+    border: 10px solid white;
+    border-radius: 10%
+}
+.todo-form {
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+    font-size: large;
+    width: 100%;
+}
+
+#todo-list {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 470px;
+    margin-bottom: 10;
+    justify-content: center;
+    list-style-image: url(../img/checkmark.png);
+}
+
+#clock {
+    font-size: 80px;
+    color: rgb(194, 194, 194);
+}
+#weather {
+    display:flex;
+    box-sizing: border-box;
+    position:relative;
+    justify-content: flex-end;
+    background-color: transparent;
+}
+#weather span {
+    display:block;
+    margin-right: 10px;
+    color:rgba(255, 255, 255, 0.589)
+}
+.todo_list {
+    display: inline;
+    padding-right: 5px;
+    font-size: medium;
+    color: rgb(185, 185, 185);
+}
+
+.delete_button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    border-top: 3px;
+    padding-top: 14px;
+    border-radius: 20%;
+    
+    outline: none;
+    background-color: rgba(255, 137, 124, 0.308);
+    opacity: 0;
+    overflow:hidden;
+
+    background-image: url(../img/trashcan.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    cursor:pointer;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.delete_button:hover {
+    opacity: 0.7;
+}
+
+.hidden {
+    display: none;
+}
+
+#quote span:first-child {
+    display:block;
+    overflow:auto;
+    font: 'Helvetica Neue';
+    font-size: small;
+}
+#quote span:last-child {
+    display:block;
+    overflow:auto;
+    font-weight: bold;
+    font: 'Helvetica Neue';
+    font-size:large;
+}
+
+#todo-form input {
+    background: 0;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    padding-left: 15px;
+    border: 0;
+    outline: none;
+    width: 90%;
+    height:fit-content;
+    font-size: 1em;
+    color: white;
+    word-wrap: break-word;
+
+    transition: padding 0.3s 0.2s ease;
+}
+
+#todo-form input:focus {
+    padding-bottom: 5px;
+    border-bottom: 2px solid gold;
+}
+
+#todo-form input:after {
+    transform: scaleX(1);
+}
